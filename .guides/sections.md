@@ -157,17 +157,34 @@ Take a look at the image below. Although this does not show the real machine cod
 
 [IMAGE SHOWING INSTRUCTIONS AND MEMORY. BETTER WOULD BE AN ANIMATION]
 
-| Memory Location | Instruction | Code from Example |
-|-|-|-|
-|1000 | LOAD 100 | `a=100` |
-|1001 | STORE a 
-LOAD 200
-STORE b
-LOAD a
-ADD b
-STORE c
-LOAD c
-DISPLAY
+| Memory Location | Instruction | Code from Example | Comment |
+|-|-|-|-|
+| 1000 | LOAD 100 | `a=100` | Load 100 into the CPU's *register* |
+| 1001 | STORE a  |         | Store the register at memory location `a` which is memory location 1010 |
+| 1002 | LOAD 200 | `b=200`  | Load 200 into the CPU's *register* |
+| 1003 | STORE b  |         | Store the register at memory location `b` which is memory location 1011 |
+| 1004 | LOAD a   | `c = a + b` | Load the value stored in memory location `a`, which is 100, into the CPU register |
+| 1005 | ADD b    |         | Add the value stored in memory location `b` (200) to the value currently stored in the register (100) which gives 300 |
+| 1006 | STORE c  |         | Store the CPU register (300) to memory location `c` |
+| 1007 | LOAD c   | `writeToScreen(c)` | Load the value in memory location `c` (300) into the CPU register |
+| 1008 | DISPLAY  |         | Display the value in the CPU register (300) on the screen |
+| 1009 | END      |         | End program execution |
+| 1010 | DATA a   |         | Memory location to store `a` |
+| 1011 | DATA b   |         | Memory location to store `b` |
+| 1012 | DATA c   |         | Memory location to store `c` |
+
+## Following the cycle
+
+1. The program starts running and the CPU is told to start executing the program at memory location 1000.
+1. It **fetches** the instruction stored at 1000 and then executes the instruction, which is to load the value 100 into the CPU register. The register is a simply a place in the CPU where values are stored.
+1. The CPU is then told to fetch the next instruction, which is at memory location 1001. This instruction tells the CPU to store whatever is in its register (100) to memory location `a`.
+1. Again, the CPU is told to fetch the next intstruction and execute it.
+1. This fetch/execute process continues until the `END` instruction is reached, at which point.
+
+
+
+
+
 
 
 ---
