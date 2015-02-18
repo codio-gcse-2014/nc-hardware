@@ -1,4 +1,22 @@
 ---
+title: Introduction
+files: []
+
+---
+If you recall from the earlier module 'Fundamentals of a Computer System', a Von Neumann system
+
+## The 4 main components of a computer system
+Any computer system is made up of 4 main components
+
+- **Input** : information and data from components or devices provided to the computer system
+- **Output** : information provided by the computer system to other devices and components
+- **Store** : Computer systems need to store data so it can be processed. This includes memory, disk drives and other forms of storage.
+- **Processing** : This generally means the CPU (or processor), which is the brain of the computer system. It involves running programs as well as coordinating the flow of information between input devices, output devices and storage.
+
+This section now goes into more depth about these 4 components.
+
+
+---
 title: Input Devices
 files: []
 
@@ -37,6 +55,8 @@ Here are some example devices that have CPUs
 - Mobile Phones and iPads
 - Modern washing machines and fridges
 - Modern watches and clocks, not just digital ones
+
+In fact just about every modern electronic device has a CPU in it.
 
 ## What does a CPU look like?
 Here are some images of CPUs ...
@@ -107,6 +127,32 @@ Running 4 programs on a single core means that each program will run about 4 tim
 
 Your device's operating system is responsible for trying to divide running programs across all available cores. On almost all modern consumer devices, you have a lot of programs running simultaneously even if you are unaware of it, so having multiple cores is usually a good thing for performance.
 
+
+
+---
+title: Fetch Execute Cycle
+files: []
+
+---
+As we've already stated, a CPU is responsible for executing programs. 
+
+A program is stored in RAM memory as a sequence of instructions. It's actually stored in memory as machine code, which we'll cover in more detail in another module, but imagine we have a really simple program that does the following
+
+```
+a=100
+b=200
+c = a + b
+writeToScreen(c)
+```
+
+This little program does the following
+
+1. Assign the value `100` to a memory location called `a`
+1. Assign the value `200` to a memory location called `b`
+1. Add the value stored in memory location `a` (100) to the value stored in memory location `b` and store it in another memory location `c`.
+1. Write the value stored in memo
+
+1. 
 
 
 ---
