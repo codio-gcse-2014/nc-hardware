@@ -149,10 +149,25 @@ This little program does the following
 
 1. Assign the value `100` to a memory location called `a`
 1. Assign the value `200` to a memory location called `b`
-1. Add the value stored in memory location `a` (100) to the value stored in memory location `b` and store it in another memory location `c`.
-1. Write the value stored in memo
+1. Add the value stored in memory location `a` (100) to the value stored in memory location `b` (200) and store it in another memory location `c`, so `c` contains the value 300.
+1. Display the value stored in memory location `c` (300) on the screen
 
-1. 
+## How the CPU executes our program
+Take a look at the image below. Although this does not show the real machine code instructions, it is actually a very good representation of what the CPU does.
+
+[IMAGE SHOWING INSTRUCTIONS AND MEMORY. BETTER WOULD BE AN ANIMATION]
+
+| Memory Location | Instruction | Code from Example |
+|-|-|-|
+|1000 | LOAD 100 | `a=100` |
+|1001 | STORE a 
+LOAD 200
+STORE b
+LOAD a
+ADD b
+STORE c
+LOAD c
+DISPLAY
 
 
 ---
